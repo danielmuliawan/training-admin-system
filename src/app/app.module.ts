@@ -93,7 +93,7 @@ import { AppComponent } from './app.component';
         { path: '', component: HomeComponent },
         { path: 'home', component: HomeComponent},
         { path: 'create-period', component: PeriodComponent},
-        { path: 'period', component: ContentPeriodComponent }
+        { path: 'content-period', component: ContentPeriodComponent }
       ] }
     ])
   ],

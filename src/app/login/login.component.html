@@ -1,0 +1,16 @@
+<div class="row content-login">
+    <form class="example-form">
+        <h3>Login</h3>
+        <md-progress-bar [mode]="mode" [value]="value"></md-progress-bar>
+        <md-form-field class="example-full-width">
+            <input mdInput placeholder="email" type="email" value="" required autofocus>
+        </md-form-field>
+        <md-form-field class="example-full-width">
+            <input  mdInput placeholder="Password" type="password" value="" required>
+        </md-form-field>
+        <div>
+            <md-checkbox >Remember me</md-checkbox>
+        </div>
+        <button md-button routerLink="../dashboard" style="color: white;background-color: #691a99; margin-top:18px;">Submit</button>
+    </form>
+</div>

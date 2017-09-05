@@ -1,0 +1,23 @@
+<div class="row content">
+    <form class="example-form">
+        <h3>Training Period - Create</h3>
+        <md-form-field class="example-full-width">
+            <input mdInput placeholder="Name" value="" required autofocus>
+        </md-form-field>
+        <md-form-field class="example-full-width">
+            <input mdInput [mdDatepicker]="startdatepicker" placeholder="Start Date">
+            <md-datepicker-toggle mdSuffix [for]="startdatepicker"></md-datepicker-toggle>
+            <md-datepicker #startdatepicker></md-datepicker>
+        </md-form-field>
+        <md-form-field class="example-full-width">
+            <input mdInput [mdDatepicker]="enddatepicker" placeholder="End Date">
+            <md-datepicker-toggle mdSuffix [for]="enddatepicker"></md-datepicker-toggle>
+            <md-datepicker #enddatepicker></md-datepicker>
+        </md-form-field>
+        <div>
+            <md-checkbox >Is this enrollment open?</md-checkbox>
+        </div>
+        <button md-button routerLink="../" style="color: white;background-color: #691a99; margin-top:18px;">Save</button>
+        <button md-button style="color: white;background-color: #691a99; margin-top:18px;">Cancel</button>
+    </form>
+</div>

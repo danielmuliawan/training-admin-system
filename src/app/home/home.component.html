@@ -1,0 +1,48 @@
+<div class="row content">
+    <h3 style="margin-top:0;"><md-icon>date_range</md-icon>  Active Training</h3>
+  <div class="example-container-table mat-elevation-z8">
+    <md-table #table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container mdColumnDef="course">
+        <md-header-cell *mdHeaderCellDef> Course name</md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.course}} </md-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container mdColumnDef="main_trainer">
+        <md-header-cell *mdHeaderCellDef> Main trainer </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.main_trainer}} </md-cell>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container mdColumnDef="backup_trainer">
+        <md-header-cell *mdHeaderCellDef> Back up trainer </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.backup_trainer}} </md-cell>
+      </ng-container>
+  
+      <!-- Color Column -->
+      <ng-container mdColumnDef="start_date">
+        <md-header-cell *mdHeaderCellDef> Start date </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.start_date}} </md-cell>
+      </ng-container>
+
+      <ng-container mdColumnDef="end_date">
+        <md-header-cell *mdHeaderCellDef> End date </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.end_date}} </md-cell>
+      </ng-container>
+
+      <ng-container mdColumnDef="location">
+        <md-header-cell *mdHeaderCellDef> Location </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.location}} </md-cell>
+      </ng-container>
+  
+      <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+      <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+    </md-table>
+
+  </div>
+</div>
+<div class="row content">
+      <table-schedule></table-schedule>
+</div>

@@ -1,0 +1,43 @@
+<h3 style="margin-top:0;"><md-icon>date_range</md-icon>   BCC Scheduling</h3>
+<div class="example-container-table mat-elevation-z8">
+  <md-table #table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container mdColumnDef="trainer">
+      <md-header-cell *mdHeaderCellDef> Trainer</md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.trainer}} </md-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container mdColumnDef="mon">
+      <md-header-cell *mdHeaderCellDef> Mon </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.mon}} </md-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container mdColumnDef="tue">
+      <md-header-cell *mdHeaderCellDef> Tue </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.tue}} </md-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container mdColumnDef="wed">
+      <md-header-cell *mdHeaderCellDef> Wed </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.wed}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="thu">
+      <md-header-cell *mdHeaderCellDef> Thu </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.thu}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="fri">
+      <md-header-cell *mdHeaderCellDef> Fri </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.fri}} </md-cell>
+    </ng-container>
+
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+
+</div>

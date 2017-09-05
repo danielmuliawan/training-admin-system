@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light static-top sb-navbar" style="border-bottom:0;" (click)="sidenav.close()">
+    <div class="container">
+      <button  md-icon-button (click)="sidenav.open()">
+          <md-icon style="color: white; ">menu</md-icon>
+      </button>
+      <button mdTooltip="Logout!" routerLink="/login" class="navbar-brand" md-icon-button>
+          <md-icon style="color: white; ">exit_to_app</md-icon>
+      </button>
+      <button mdTooltip="Home" routerLink="/dashboard/home" class="navbar-brand" md-icon-button>
+        <md-icon style="color: white; ">home</md-icon>
+    </button>
+    <button md-button routerLink="/dashboard/home" class="title" style="color:white;"><b>Training Admin System</b>
+    </button>
+    </div>
+  </nav>
+  
+  <md-sidenav-container class="example-container" fullscreen>
+    <md-sidenav #sidenav class="example-sidenav mat-drawer mat-sidenav">
+      <nav>
+          <h3>Period</h3>
+          <ul>
+              <li><a routerLink="create-period" (click)="sidenav.close()">Create</a></li>
+          </ul>
+      </nav>
+      <nav>
+          <h3 class="h3-nav">User</h3>
+          <ul>
+              <li><a routerLink="create-period" class="menu-button" (click)="sidenav.close()">View user</a></li>
+          </ul>
+      </nav>
+      <nav>
+          <h3 class="h3-nav">Enrollment</h3>
+          <ul>
+              <li><a routerLink="create-period" class="menu-button" (click)="sidenav.close()">View enrollment</a></li>
+          </ul>
+      </nav>
+      <nav>
+          <h3 class="h3-nav">Achievement</h3>
+          <ul>
+              <li><a routerLink="create-period" class="menu-button" (click)="sidenav.close()">View Achievement</a></li>
+          </ul>
+      </nav>
+    </md-sidenav>
+  
+    <router-outlet></router-outlet>
+    <!-- <div class="row footer">Sopyan and Daniel <strong>2017</strong>.</div> -->
+</md-sidenav-container>
